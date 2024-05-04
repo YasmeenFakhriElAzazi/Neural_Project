@@ -25,10 +25,10 @@ imgInput=ft.Image(src=imageDispaly)
 imgSegment=ft.Image(src=imageDispaly)
 imgPreprocess=ft.Image(src=imageDispaly)
 
-textArea=ft.Text("Affected Area:\n         ???",style=ft.TextStyle(size=14, weight=ft.FontWeight.W_800))
-textAccuracy=ft.Text("    Accuracy:\n         ???",      style=ft.TextStyle(size=14, weight=ft.FontWeight.W_800))
-textMean=ft.Text("      Mean:\n          ???",  style=ft.TextStyle(size=14, weight=ft.FontWeight.W_800))
-textEntropy=ft.Text("      Entropy:\n         ???",  style=ft.TextStyle(size=14, weight=ft.FontWeight.W_800))                              
+textArea=ft.Text("Affected Area:\n         ???",style=ft.TextStyle(size=14, weight=ft.FontWeight.W_800, color=ft.colors.BLACK))
+textAccuracy=ft.Text("    Accuracy:\n         ???",      style=ft.TextStyle(size=14, weight=ft.FontWeight.W_800, color=ft.colors.BLACK))
+textMean=ft.Text("      Mean:\n          ???",  style=ft.TextStyle(size=14, weight=ft.FontWeight.W_800, color=ft.colors.BLACK))
+textEntropy=ft.Text("      Entropy:\n         ???",  style=ft.TextStyle(size=14, weight=ft.FontWeight.W_800, color=ft.colors.BLACK))
 async def main(page: ft.Page):
 
 
