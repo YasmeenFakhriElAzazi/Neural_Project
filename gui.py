@@ -25,10 +25,10 @@ imgInput=ft.Image(src=imageDispaly)
 imgSegment=ft.Image(src=imageDispaly)
 imgPreprocess=ft.Image(src=imageDispaly)
 
-textArea=ft.Text("Affected Area:\n         ???",style=ft.TextStyle(size=14, weight=ft.FontWeight.W_800))
-textAccuracy=ft.Text("    Accuracy:\n         ???",      style=ft.TextStyle(size=14, weight=ft.FontWeight.W_800))
-textMean=ft.Text("      Mean:\n          ???",  style=ft.TextStyle(size=14, weight=ft.FontWeight.W_800))
-textEntropy=ft.Text("      Entropy:\n         ???",  style=ft.TextStyle(size=14, weight=ft.FontWeight.W_800))                              
+textArea=ft.Text("Affected Area:\n         ???",style=ft.TextStyle(size=14, weight=ft.FontWeight.W_800, color=ft.colors.BLACK))
+textAccuracy=ft.Text("    Accuracy:\n         ???",      style=ft.TextStyle(size=14, weight=ft.FontWeight.W_800, color=ft.colors.BLACK))
+textMean=ft.Text("      Mean:\n          ???",  style=ft.TextStyle(size=14, weight=ft.FontWeight.W_800, color=ft.colors.BLACK))
+textEntropy=ft.Text("      Entropy:\n         ???",  style=ft.TextStyle(size=14, weight=ft.FontWeight.W_800, color=ft.colors.BLACK))
 async def main(page: ft.Page):
 
 
@@ -369,7 +369,7 @@ async def main(page: ft.Page):
                                                 border=ft.border.all(width=1.2, color=ft.colors.BLACK),
                                                 content=imgInput, width=181, height=178),
                                                                ft.Container(
-                                                                   ft.Text("input image", weight=ft.FontWeight.W_700),
+                                                                   ft.Text("input image", weight=ft.FontWeight.W_700, color=ft.colors.BLACK),
                                                                    width=181, alignment=ft.alignment.center),
                                                                ft.Container(height=20), ]),
                                                     ft.Container(width=20)
@@ -377,7 +377,7 @@ async def main(page: ft.Page):
                                                     border=ft.border.all(width=1.2, color=ft.colors.BLACK),
                                                     content=imgPreprocess, width=181, height=178),
                                                                     ft.Container(ft.Text("Gary conversion",
-                                                                                         weight=ft.FontWeight.W_700),
+                                                                                         weight=ft.FontWeight.W_700, color=ft.colors.BLACK),
                                                                                  width=181,
                                                                                  alignment=ft.alignment.center),
                                                                     ft.Container(height=20), ]), ]),
@@ -385,7 +385,7 @@ async def main(page: ft.Page):
                                                 border=ft.border.all(width=1.2, color=ft.colors.BLACK),
                                                 content=  ft.Image('./none.png'), width=181, height=178),
                                                                ft.Container(
-                                                                   ft.Text("Enhancement", weight=ft.FontWeight.W_700),
+                                                                   ft.Text("Enhancement", weight=ft.FontWeight.W_700, color=ft.colors.BLACK),
                                                                    width=181, alignment=ft.alignment.center),
                                                                ft.Container(height=10), ]),
                                                     ft.Container(width=20)
@@ -393,14 +393,14 @@ async def main(page: ft.Page):
                                                     border=ft.border.all(width=1.2, color=ft.colors.BLACK),
                                                     content=  imgSegment, width=181, height=178),
                                                                     ft.Container(ft.Text("segmentation",
-                                                                                         weight=ft.FontWeight.W_700),
+                                                                                         weight=ft.FontWeight.W_700, color=ft.colors.BLACK),
                                                                                  width=181,
                                                                                  alignment=ft.alignment.center),
                                                                     ft.Container(height=10), ])])
 
                                         ,
                                             ft.Row([
-                                                ft.Text("Healthy Or Diseased ? :", size=23, weight=ft.FontWeight.BOLD)
+                                                ft.Text("Healthy Or Diseased ? :", size=23, weight=ft.FontWeight.BOLD, color=ft.colors.BLACK)
                                                 ,
                                                 t,
                                           
@@ -422,7 +422,7 @@ async def main(page: ft.Page):
                                     margin=ft.margin.only(bottom=30),
 
                                     content=ft.Column([
-                                        ft.Text("Parameters", style=ft.TextStyle(size=23, weight=ft.FontWeight.BOLD)),
+                                        ft.Text("Parameters", style=ft.TextStyle(size=23, weight=ft.FontWeight.BOLD), color=ft.colors.BLACK),
                                         ft.Container(
 
                                             content=textArea
